@@ -48,7 +48,7 @@ string assemble_instruction(string in_inst){
         func3 = "110";
     if(inst_name == "and")
         func3 = "111";
-    return func7 + translate_register(rs2) + translate_register(rs1) + func3 + translate_register(rd) + opcode;
+    return func7 + "_" + translate_register(rs2) + "_" + translate_register(rs1) + "_" + func3 + "_" + translate_register(rd) + "_" +  opcode;
   }
   else{
     throw string("Unrecognized Instruction");
