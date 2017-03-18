@@ -48,8 +48,8 @@ string generate_rand_i_inst(int mem_index){
 }
 
 string generate_rand_instruction(int mem_index){
-  int inst_type_dice = rand_int_range(0, 1);
-  switch(inst_type_dice){
+  int inst_type_die = rand_int_range(0, 1);
+  switch(inst_type_die){
     case 0: return generate_rand_r_inst(mem_index);
     case 1: return generate_rand_i_inst(mem_index);
   }

@@ -1,0 +1,45 @@
+
+../tests/functional-tests/1/c/1.c.elf:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00000000 <_start>:
+   0:	00010137          	lui	sp,0x10
+   4:	ffc10113          	addi	sp,sp,-4 # fffc <_fstack>
+   8:	008000ef          	jal	ra,10 <main>
+
+0000000c <loopf>:
+   c:	0000006f          	j	c <loopf>
+
+00000010 <main>:
+  10:	fe010113          	addi	sp,sp,-32
+  14:	00812e23          	sw	s0,28(sp)
+  18:	02010413          	addi	s0,sp,32
+  1c:	08800793          	li	a5,136
+  20:	fef42623          	sw	a5,-20(s0)
+  24:	fec42783          	lw	a5,-20(s0)
+  28:	fef42423          	sw	a5,-24(s0)
+  2c:	03c0006f          	j	68 <main+0x58>
+  30:	fe842783          	lw	a5,-24(s0)
+  34:	0007c783          	lbu	a5,0(a5)
+  38:	fef403a3          	sb	a5,-25(s0)
+  3c:	fe744703          	lbu	a4,-25(s0)
+  40:	06000793          	li	a5,96
+  44:	02e7f263          	bleu	a4,a5,68 <main+0x58>
+  48:	fe744703          	lbu	a4,-25(s0)
+  4c:	07a00793          	li	a5,122
+  50:	00e7ec63          	bltu	a5,a4,68 <main+0x58>
+  54:	fe744783          	lbu	a5,-25(s0)
+  58:	fe078793          	addi	a5,a5,-32
+  5c:	0ff7f713          	andi	a4,a5,255
+  60:	fe842783          	lw	a5,-24(s0)
+  64:	00e78023          	sb	a4,0(a5)
+  68:	fe842783          	lw	a5,-24(s0)
+  6c:	0007c783          	lbu	a5,0(a5)
+  70:	fc0790e3          	bnez	a5,30 <main+0x20>
+  74:	00000793          	li	a5,0
+  78:	00078513          	mv	a0,a5
+  7c:	01c12403          	lw	s0,28(sp)
+  80:	02010113          	addi	sp,sp,32
+  84:	00008067          	ret

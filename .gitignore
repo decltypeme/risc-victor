@@ -1,6 +1,8 @@
+src/rv32i_sim.cpp
+
 # .s and .lst files
-*.s
-*.lst
+tests/*/*.s
+tests/*/*.lst
 
 # Compiled Object files
 *.slo

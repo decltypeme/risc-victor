@@ -7,7 +7,7 @@
 
 using namespace std;
 
-#define BANK_OUT(BANK) BANK << inst_line.substr(0, 8) << "\n";inst_line = inst_line.substr(8);
+#define BANK_OUT(BANK) BANK << inst_line.substr(0, 8);inst_line = inst_line.substr(8);
 
 void divide_file(ifstream& in_file, ofstream& bank3, ofstream& bank2, ofstream& bank1, ofstream& bank0){
   string inst_line;
