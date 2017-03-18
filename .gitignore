@@ -1,3 +1,8 @@
+# .s and .lst files
+
+*.s
+*.lst
+
 # Compiled Object files
 *.slo
 *.lo
