@@ -1,3 +1,4 @@
+#!/bin/bash
 TESTCOUNT=${1:-5}
 MINLENGTH=${2:-17}
 MAXLENGTH=${3:-42}
