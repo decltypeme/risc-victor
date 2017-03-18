@@ -1,5 +1,3 @@
-src/rv32i_sim.cpp
-
 # .s and .lst files
 tests/*/*.s
 tests/*/*.lst
