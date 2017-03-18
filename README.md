@@ -12,7 +12,7 @@ chmod +x make-bin.sh
 # Generating Random Tests
 ```
 chmod +x gen-rand-tests.sh
-./gen-rand-tests.sh [tests-count] [min-prog-length] [max-prog-length]
+./gen-rand-tests.sh [tests-count=5] [min-prog-length=17] [max-prog-length=42]
 ```
 
 # Assembler
